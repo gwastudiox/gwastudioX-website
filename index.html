@@ -1,0 +1,579 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GWAstudioX - Digital Marketing & Design Agency</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* --- NEW DARK THEME COLOR PALETTE --- */
+        :root {
+            --bg-dark: #0d1117; /* Very dark blue-gray, like GitHub's dark mode */
+            --bg-secondary: #161b22; /* Slightly lighter for cards and surfaces */
+            --border-color: #30363d;
+            --accent-cyan: #22d3ee; /* Vibrant cyan from your logo */
+            --accent-cyan-hover: #67e8f9;
+            --text-light: #e6edf3; /* Off-white for body text */
+            --text-muted: #8b949e; /* Lighter gray for muted text */
+            --whatsapp: #25D366;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            scroll-behavior: smooth;
+        }
+        
+        /* --- GENERAL & UTILITY CLASSES --- */
+        .bg-dark { background-color: var(--bg-dark) !important; }
+        .bg-secondary { background-color: var(--bg-secondary) !important; }
+        .text-accent { color: var(--accent-cyan) !important; }
+        .text-light { color: var(--text-light) !important; }
+        .text-muted { color: var(--text-muted) !important; }
+        .section-padding { padding: 80px 0; }
+
+        .section-title {
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--text-light);
+        }
+        
+        .section-title span {
+            color: var(--accent-cyan);
+        }
+        
+        .section-subtitle {
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 50px;
+        }
+
+        /* --- NAVIGATION --- */
+        .navbar {
+            background-color: rgba(22, 27, 34, 0.85); /* Semi-transparent secondary background */
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        }
+        #navbar-logo {
+            height: 60px;
+        }
+        .navbar-toggler {
+            border-color: var(--border-color);
+        }
+        .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28230, 237, 243, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+        .nav-link {
+            position: relative;
+            padding-bottom: 4px;
+            color: var(--text-light) !important;
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: var(--accent-cyan) !important;
+        }
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: var(--accent-cyan);
+            transition: width 0.3s ease;
+        }
+        .nav-link:hover::after,
+        .nav-link.active::after {
+            width: 100%;
+        }
+        
+        /* --- HERO SECTION --- */
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(13, 17, 23, 0.9) 0%, rgba(0, 0, 0, 0.95) 100%),
+                        url('img-web/colleagues-working-project-discussing-details.jpg') no-repeat center center;
+            background-size: cover;
+        }
+        .hero-content h1 span {
+            color: var(--accent-cyan);
+        }
+        .btn-solid-hero {
+            background-color: var(--accent-cyan);
+            border: 2px solid var(--accent-cyan);
+            color: var(--bg-dark);
+            padding: 12px 32px;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+        .btn-solid-hero:hover {
+            background-color: var(--accent-cyan-hover);
+            border-color: var(--accent-cyan-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(34, 211, 238, 0.1);
+        }
+        .btn-outline-custom {
+            border: 2px solid var(--accent-cyan);
+            color: var(--accent-cyan);
+            padding: 12px 32px;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+        .btn-outline-custom:hover {
+            background-color: var(--accent-cyan);
+            color: var(--bg-dark);
+        }
+
+        /* --- STATS SECTION --- */
+        .stat-box .stat-number {
+            font-size: 3rem;
+            font-weight: 700;
+            color: var(--accent-cyan);
+            margin-bottom: 10px;
+        }
+
+        /* --- SERVICES SECTION --- */
+        .service-card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.2);
+            border-color: var(--accent-cyan);
+        }
+        .service-card .fs-2 {
+            color: var(--accent-cyan);
+        }
+        .service-card .bi-check-circle-fill {
+            color: var(--accent-cyan);
+        }
+
+        /* --- ABOUT SECTION --- */
+        #about {
+            background-color: var(--bg-secondary);
+        }
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgba(34, 211, 238, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--accent-cyan);
+            font-size: 20px;
+            margin-right: 15px;
+            flex-shrink: 0;
+        }
+
+        /* --- PORTFOLIO SECTION --- */
+        .portfolio-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 12px;
+            height: 280px;
+        }
+        .portfolio-item img {
+            width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s ease;
+        }
+        .portfolio-overlay {
+            position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+            background-color: rgba(13, 17, 23, 0.95);
+            display: flex; flex-direction: column; justify-content: center; align-items: center;
+            opacity: 0; transition: opacity 0.3s ease; padding: 20px;
+            color: var(--text-light); text-align: center;
+        }
+        .portfolio-item:hover img { transform: scale(1.05); }
+        .portfolio-item:hover .portfolio-overlay { opacity: 1; }
+        .btn-outline-light {
+             border-color: var(--accent-cyan); color: var(--accent-cyan);
+        }
+        .btn-outline-light:hover {
+            background-color: var(--accent-cyan); color: var(--bg-dark);
+        }
+
+        /* --- TESTIMONIALS SECTION --- */
+        #testimonials {
+            background-color: var(--bg-dark);
+        }
+        .testimonial-card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            transition: all 0.3s;
+            height: 100%;
+        }
+        .testimonial-card:hover {
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transform: translateY(-5px);
+        }
+        .text-warning {
+            color: var(--accent-cyan) !important; /* Change stars to cyan */
+        }
+
+        /* --- CTA & BUTTONS --- */
+        .cta-section {
+            background-color: var(--bg-secondary);
+        }
+        .btn-primary-custom {
+            background-color: var(--accent-cyan);
+            border-color: var(--accent-cyan);
+            color: var(--bg-dark);
+            padding: 12px 32px;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: all 0.3s;
+        }
+        .btn-primary-custom:hover {
+            background-color: var(--accent-cyan-hover);
+            border-color: var(--accent-cyan-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(34, 211, 238, 0.1);
+        }
+
+        /* --- CONTACT & FORM --- */
+        #contact {
+            background-color: var(--bg-dark);
+        }
+        #contact form {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+        }
+        .input-custom {
+            border: 1px solid var(--border-color);
+            border-radius: 10px;
+            padding: 12px 20px;
+            transition: all 0.3s;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+        }
+        .input-custom:focus {
+            border-color: var(--accent-cyan);
+            box-shadow: 0 0 0 0.25rem rgba(34, 211, 238, 0.25);
+            outline: none;
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+        }
+        .form-label {
+            color: var(--text-muted);
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--bg-secondary);
+            border-top: 1px solid var(--border-color);
+        }
+        footer .h3 {
+            color: var(--text-light);
+        }
+        footer .h3 span {
+            color: var(--accent-cyan);
+        }
+        footer .text-secondary {
+            color: var(--text-muted) !important;
+        }
+        footer a.text-secondary:hover {
+            color: var(--accent-cyan) !important;
+        }
+        .social-icon {
+            display: inline-flex; align-items: center; justify-content: center;
+            width: 45px; height: 45px; border-radius: 50%;
+            background-color: var(--bg-dark);
+            color: var(--accent-cyan);
+            font-size: 18px;
+            transition: all 0.3s;
+            border: 1px solid var(--border-color);
+        }
+        .social-icon:hover {
+            background-color: var(--accent-cyan);
+            color: var(--bg-dark);
+            transform: translateY(-3px);
+        }
+
+        /* --- WHATSAPP BUTTON --- */
+        .whatsapp-btn {
+            position: fixed; bottom: 30px; right: 30px;
+            width: 60px; height: 60px;
+            background-color: var(--whatsapp);
+            color: white; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 28px; z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            animation: pulse 2s infinite;
+            transition: all 0.3s;
+        }
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+            transform: scale(1.05);
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+    </style>
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="85">
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/+916238420550?text=Hello! I'm interested in GWAstudioX's digital marketing services." 
+       class="whatsapp-btn" aria-label="Contact us on WhatsApp">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Navigation -->
+   <nav class="navbar navbar-expand-lg sticky-top py-3">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <!-- IMPORTANT: Change this to your new white logo file -->
+            <img src="img-web/logo-whitev2.svg" alt="GWAstudioX Logo" id="navbar-logo"
+                 onerror="this.onerror=null; this.src='https://placehold.co/200x60/0d1117/22d3ee?text=GWAstudioX';">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item mx-2"><a class="nav-link active" href="#home">Home</a></li>
+                <li class="nav-item mx-2"><a class="nav-link" href="#services">Services</a></li>
+                <li class="nav-item mx-2"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item mx-2"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                <li class="nav-item mx-2"><a class="nav-link" href="#testimonials">Clients</a></li>
+                <li class="nav-item mx-2"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-gradient text-white py-5 py-lg-6">
+            <div class="container position-relative py-5">
+                <div class="row align-items-center justify-content-center">
+                    <div class="col-lg-10 text-center hero-content">
+                        <h1 class="display-4 fw-bold mb-4">
+                            Transform Your Business With <span>Digital Excellence</span>
+                        </h1>
+                        <p class="lead mb-5 opacity-90">
+                            We combine creative design with data-driven marketing strategies to help your brand thrive in the digital landscape.
+                        </p>
+                        <div class="d-flex flex-column align-items-center flex-sm-row justify-content-center">
+                            <a href="#contact" class="btn btn-solid-hero me-sm-3 mb-3 mb-sm-0">Get Started</a>
+                            <a href="#services" class="btn btn-outline-custom">Our Services</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="bg-secondary py-5">
+            <div class="container">
+                <div class="row g-4 text-center">
+                    <div class="col-6 col-md-3"><div class="stat-box"><div class="stat-number" id="clients-count">0</div><div class="text-muted">Happy Clients</div></div></div>
+                    <div class="col-6 col-md-3"><div class="stat-box"><div class="stat-number" id="projects-count">0</div><div class="text-muted">Projects Completed</div></div></div>
+                    <div class="col-6 col-md-3"><div class="stat-box"><div class="stat-number" id="team-count">0</div><div class="text-muted">Expert Team Members</div></div></div>
+                    <div class="col-6 col-md-3"><div class="stat-box"><div class="stat-number" id="awards-count">0</div><div class="text-muted">Awards Won</div></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" class="section-padding bg-dark">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-title">Our <span>Services</span></h2>
+                    <p class="section-subtitle">We offer comprehensive digital solutions tailored to your business needs. Our services are designed to drive growth and maximize your online potential.</p>
+                </div>
+                <div class="row g-4">
+                    <!-- Cards updated with new classes -->
+                    <div class="col-md-6 col-lg-3 d-flex"><div class="service-card p-4 h-100"><div class="fs-2 mb-4"><i class="bi bi-graph-up"></i></div><h3 class="h5 fw-bold mb-3">Digital Marketing</h3><p class="text-muted mb-3">Data-driven strategies including SEO, PPC, and social media marketing to increase your online visibility and conversions.</p><ul class="list-unstyled text-muted small"><li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i>SEO Optimization</li><li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i>PPC Campaigns</li><li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i>Social Media Strategy</li></ul></div></div>
+                    <div class="col-md-6 col-lg-3 d-flex"><div class="service-card p-4 h-100"><div class="fs-2 mb-4"><i class="bi bi-palette"></i></div><h3 class="h5 fw-bold mb-3">Brand Design</h3><p class="text-muted mb-3">Crafting memorable brand identities that resonate with your audience and differentiate you from competitors.</p><ul class="list-unstyled text-muted small"><li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i>Logo Design</li><li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i>Brand Guidelines</li><li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i>Visual Identity</li></ul></div></div>
+                    <div class="col-md-6 col-lg-3 d-flex"><div class="service-card p-4 h-100"><div class="fs-2 mb-4"><i class="bi bi-code-slash"></i></div><h3 class="h5 fw-bold mb-3">Web Design</h3><p class="text-muted mb-3">Beautiful, functional websites that convert visitors into customers with intuitive UX/UI design.</p><ul class="list-unstyled text-muted small"><li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i>Responsive Design</li><li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i>E-commerce Solutions</li><li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i>UX/UI Optimization</li></ul></div></div>
+                    <div class="col-md-6 col-lg-3 d-flex"><div class="service-card p-4 h-100"><div class="fs-2 mb-4"><i class="bi bi-lightbulb"></i></div><h3 class="h5 fw-bold mb-3">Creative Services</h3><p class="text-muted mb-3">Innovative design solutions for all your marketing needs, from print to digital assets.</p><ul class="list-unstyled text-muted small"><li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i>Graphic Design</li><li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i>Marketing Materials</li><li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i>Digital Assets</li></ul></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section-padding bg-secondary">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 mb-5 mb-lg-0"><img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="GWAstudioX team" class="img-fluid rounded shadow-lg"></div>
+                    <div class="col-lg-6"><h2 class="section-title">About <span>GWAstudioX</span></h2><p class="text-muted mb-4">Founded in 2015, GWAstudioX has grown from a small design studio to a full-service digital marketing agency. Our journey has been fueled by passion, creativity, and an unwavering commitment to delivering exceptional results for our clients.</p><p class="text-muted mb-5">We believe in the power of strategic thinking combined with creative execution. Our team of experts brings together diverse skills and perspectives to craft solutions that not only look beautiful but drive measurable business growth.</p><a href="#contact" class="btn btn-primary-custom">Get to Know Us</a></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio" class="section-padding bg-dark">
+            <div class="container">
+                <div class="text-center mb-5"><h2 class="section-title">Our <span>Portfolio</span></h2><p class="section-subtitle">Explore our recent work and see how we've helped businesses like yours achieve remarkable results.</p></div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4"><div class="portfolio-item"><img src="img-web/Colorful Illustrated Online Business and E-Commerce Blog Banner.png" alt="E-commerce website redesign" class="img-fluid"><div class="portfolio-overlay"><h3 class="h4 fw-bold mb-2">E-commerce Redesign</h3><p class="mb-4">Increased conversions by 99% with new UX design</p><a href="#" class="btn btn-outline-light rounded-pill">View Case Study</a></div></div></div>
+                    <div class="col-md-6 col-lg-4"><div class="portfolio-item"><img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Brand identity project" class="img-fluid"><div class="portfolio-overlay"><h3 class="h4 fw-bold mb-2">Brand Identity</h3><p class="mb-4">Complete rebrand for tech startup</p><a href="#" class="btn btn-outline-light rounded-pill">View Case Study</a></div></div></div>
+                    <div class="col-md-6 col-lg-4"><div class="portfolio-item"><img src="img-web/Purple Modern Social Media Marketing YouTube Thumbnail.jpg" alt="Social media campaign" class="img-fluid"><div class="portfolio-overlay"><h3 class="h4 fw-bold mb-2">Social Media Campaign</h3><p class="mb-4">Grew followers by 300% in 3 months</p><a href="#" class="btn btn-outline-light rounded-pill">View Case Study</a></div></div></div>
+                </div>
+                <div class="text-center mt-5"><a href="#" class="btn btn-primary-custom">View All Projects</a></div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section id="testimonials" class="section-padding bg-secondary">
+            <div class="container">
+                <div class="text-center mb-5"><h2 class="section-title">What Our <span>Clients</span> Say</h2><p class="section-subtitle">Don't just take our word for it. Here's what our clients have to say about working with GWAstudioX.</p></div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4 d-flex"><div class="testimonial-card"><div class="d-flex align-items-center mb-4"><div class="flex-shrink-0 me-3"><img src="https://randomuser.me/api/portraits/women/88.jpg" alt="Anjali Gupta" class="rounded-circle" width="50" height="50"></div><div><h4 class="h6 fw-bold mb-0 text-light">Anjali Gupta</h4><p class="text-muted small mb-0">CEO, TechStart Inc.</p></div></div><p class="text-muted mb-4">"GWAstudioX transformed our online presence completely. Their strategic approach to our digital marketing resulted in a 150% increase in qualified leads within six months."</p><div class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div></div></div>
+                    <div class="col-md-6 col-lg-4 d-flex"><div class="testimonial-card"><div class="d-flex align-items-center mb-4"><div class="flex-shrink-0 me-3"><img src="https://randomuser.me/api/portraits/men/56.jpg" alt="Ajay Kumar" class="rounded-circle" width="50" height="50"></div><div><h4 class="h6 fw-bold mb-0 text-light">Ajay Kumar</h4><p class="text-muted small mb-0">Marketing Director, RetailPro</p></div></div><p class="text-muted mb-4">"The website GWAstudioX designed for us exceeded all expectations. Our bounce rate decreased by 60% and conversion rates tripled. Their team is incredibly talented."</p><div class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i></div></div></div>
+                    <div class="col-md-6 col-lg-4 d-flex"><div class="testimonial-card"><div class="d-flex align-items-center mb-4"><div class="flex-shrink-0 me-3"><img src="https://randomuser.me/api/portraits/men/48.jpg" alt="Rohan Sharma" class="rounded-circle" width="50" height="50"></div><div><h4 class="h6 fw-bold mb-0 text-light">Rohan Sharma</h4><p class="text-muted small mb-0">Creative Director, DesignCo</p></div></div><p class="text-muted mb-4">"Working with GWAstudioX was a game-changer for our brand. Their creative team developed a visual identity that perfectly captures our values and resonates with our customers."</p><div class="text-warning"><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-half"></i></div></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="py-6 cta-section">
+            <div class="container text-center py-5">
+                <h2 class="display-5 fw-bold mb-4 text-light">Ready to Transform Your Digital Presence?</h2>
+                <p class="fs-5 mb-5 max-w-700 mx-auto text-muted">Let's discuss how we can help your business grow with our strategic digital marketing and design solutions.</p>
+                <div class="d-flex flex-column flex-md-row justify-content-center gap-3"><a href="#contact" class="btn btn-primary-custom btn-lg px-5 py-3">Get Started</a><a href="tel:+916238420550" class="btn btn-outline-custom btn-lg px-5 py-3">Call Us Now</a></div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section-padding bg-dark">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 mb-5 mb-lg-0"><h2 class="section-title">Get In <span>Touch</span></h2><p class="text-muted mb-5">Have a project in mind or want to learn more about our services? Fill out the form and we'll get back to you within 24 hours.</p><div class="mb-5"><div class="d-flex mb-4"><div class="contact-icon"><i class="bi bi-geo-alt"></i></div><div><h4 class="h5 fw-bold text-light">Our Office</h4><p class="text-muted">Kumaraswamy layout Bangalore 560078<br> karnataka,India</p></div></div><div class="d-flex mb-4"><div class="contact-icon"><i class="bi bi-envelope"></i></div><div><h4 class="h5 fw-bold text-light">Email Us</h4><p class="text-muted">gwastudiox@gmail.com</p></div></div><div class="d-flex"><div class="contact-icon"><i class="bi bi-telephone"></i></div><div><h4 class="h5 fw-bold text-light">Call Us</h4><p class="text-muted">+916238420550</p></div></div></div></div>
+                    <div class="col-lg-6">
+                        <form action="https://formspree.io/f/xkgzqdwa" method="POST" class="rounded-3 shadow p-4 p-lg-5">
+                            <div class="mb-4"><label for="name" class="form-label fw-medium">Your Name</label><input type="text" id="name" name="name" class="form-control input-custom" required></div>
+                            <div class="mb-4"><label for="email" class="form-label fw-medium">Email Address</label><input type="email" id="email" name="email" class="form-control input-custom" required></div>
+                            <div class="mb-4"><label for="phone" class="form-label fw-medium">Phone Number</label><input type="tel" id="phone" name="phone" class="form-control input-custom"></div>
+                            <div class="mb-4"><label for="service" class="form-label fw-medium">Service Interested In</label><select id="service" name="service" class="form-select input-custom"><option value="">Select a service</option><option value="digital-marketing">Digital Marketing</option><option value="brand-design">Brand Design</option><option value="web-design">Web Design</option><option value="creative-services">Creative Services</option></select></div>
+                            <div class="mb-4"><label for="message" class="form-label fw-medium">Your Message</label><textarea id="message" name="message" rows="4" class="form-control input-custom" required></textarea></div>
+                            <button type="submit" class="btn btn-primary-custom w-100 py-3">Send Message</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <!-- Footer -->
+    <footer class="pt-5 pb-4">
+        <div class="container pt-4">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="h3 fw-bold mb-4">GWAstudio<span>X</span></h3>
+                    <p class="text-secondary mb-4">Transforming businesses through strategic digital marketing and innovative design solutions.</p>
+                    <div class="d-flex gap-3">
+                        <a href="https://www.facebook.com/share/19ajvjrYad/" class="social-icon"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/digital_marketing_gwa_studio_x?utm_source=ig_web_button_share_sheet&igsh=cTV3YXd2ZmtheWtl" class="social-icon"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6"><h4 class="h5 fw-bold mb-4 text-light">Services</h4><ul class="list-unstyled">
+                    <li class="mb-2"><a href="#services" class="text-secondary text-decoration-none">Digital Marketing</a></li>
+                    <li class="mb-2"><a href="#services" class="text-secondary text-decoration-none">Brand Design</a></li>
+                    <li class="mb-2"><a href="#services" class="text-secondary text-decoration-none">Web Design</a></li>
+                    <li class="mb-2"><a href="#services" class="text-secondary text-decoration-none">Creative Services</a></li>
+                </ul></div>
+                <div class="col-lg-3 col-md-6"><h4 class="h5 fw-bold mb-4 text-light">Company</h4> <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#about" class="text-secondary text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="#portfolio" class="text-secondary text-decoration-none">Portfolio</a></li>
+                        <li class="mb-2"><a href="#testimonials" class="text-secondary text-decoration-none">Testimonials</a></li>
+                        <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Careers</a></li>
+                    </ul></div>
+                    <div class="col-lg-3 col-md-6">
+                    <h4 class="h5 fw-bold mb-4">Contact</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-3 d-flex">
+                            <i class="bi bi-geo-alt text-secondary me-2"></i>
+                            <span class="text-secondary">Kumaraswamy layout Bangalore 560078<br> karnataka,India</p></span>
+                        </li>
+                        <li class="mb-3 d-flex">
+                            <i class="bi bi-telephone text-secondary me-2"></i>
+                            <span class="text-secondary">+916238420550</span>
+                        </li>
+                        <li class="mb-3 d-flex">
+                            <i class="bi bi-envelope text-secondary me-2"></i>
+                            <span class="text-secondary">gwastudiox@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="border-secondary mt-5 mb-4">
+            
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <p class="text-secondary mb-3 mb-md-0">
+                    &copy; 2025 GWAstudioX. All rights reserved.
+                </p>
+                <div class="d-flex gap-4">
+                    <a href="privacy-poilicy.html" class="text-secondary text-decoration-none">Privacy Policy</a>
+                    <a href="Terms-of-service.html" class="text-secondary text-decoration-none">Terms of Service</a>
+                    <a href="site-map.html" class="text-secondary text-decoration-none">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // --- Animated Counters ---
+            const animateCounters = () => {
+                const counters = [
+                    { id: 'clients-count', target: 250, increment: 5, interval: 20 },
+                    { id: 'projects-count', target: 480, increment: 10, interval: 20 },
+                    { id: 'team-count', target: 35, increment: 1, interval: 50 },
+                    { id: 'awards-count', target: 18, increment: 1, interval: 100 }
+                ];
+                counters.forEach(counterInfo => {
+                    const element = document.getElementById(counterInfo.id);
+                    if (element && !element.hasAttribute('data-animated')) {
+                        let current = 0;
+                        element.setAttribute('data-animated', 'true');
+                        const interval = setInterval(() => {
+                            current += counterInfo.increment;
+                            if (current >= counterInfo.target) {
+                                element.textContent = counterInfo.target + '+';
+                                clearInterval(interval);
+                            } else {
+                                element.textContent = current;
+                            }
+                        }, counterInfo.interval);
+                    }
+                });
+            };
+
+            // Intersection Observer for counter animation
+            const statsSection = document.querySelector('.stat-box');
+            if (statsSection) {
+                const observer = new IntersectionObserver((entries) => {
+                    if (entries[0].isIntersecting) {
+                        animateCounters();
+                        observer.unobserve(entries[0].target);
+                    }
+                }, { threshold: 0.1 });
+                observer.observe(statsSection.closest('section'));
+            }
+
+            // --- Active Nav Link on Scroll ---
+            // Bootstrap's ScrollSpy is now handling this via data attributes in the <body> tag.
+            // The nav-link.active class will be automatically applied.
+        });
+    </script>
+</body>
+</html>
