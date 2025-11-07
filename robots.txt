@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Important: Allow Google to render all assets for SEO
+# (Do NOT block JS, CSS, or image folders)
+
+# Disallow specific sensitive or backend files
+Disallow: /CNAME
+
+# Sitemap location
+Sitemap: https://gwastudiox.site/sitemap.xml

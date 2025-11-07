@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- SEO Meta Tags -->
+    <title>Modern Web Design Best Practices for User Engagement | GWAstudioX</title>
+    <meta name="description" content="Learn how to create websites that not only look stunning but also convert visitors into customers with our expert web design best practices for 2025.">
+    <meta name="keywords" content="web design best practices, user engagement, website conversion, UI/UX design, Bangalore web design, digital agency, modern web design, responsive design">
+    <meta name="author" content="GWAstudioX">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://gwastudiox.site/blog-web-design-practices.html"> 
+
+    <!-- Open Graph (for social sharing) -->
+    <meta property="og:title" content="Modern Web Design Best Practices for User Engagement | GWAstudioX">
+    <meta property="og:description" content="Learn how to create websites that not only look stunning but also convert visitors into customers with our expert web design best practices for 2025.">
+    <meta property="og:image" content="https://gwastudiox.site/img-web/social-share-image.png"> 
+    <meta property="og:url" content="https://gwastudiox.site/blog-web-design-practices.html">
+    <meta property="og:type" content="article">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Modern Web Design Best Practices for User Engagement | GWAstudioX">
+    <meta name="twitter:description" content="Learn how to create websites that not only look stunning but also convert visitors into customers with our expert web design best practices for 2025.">
+    <meta name="twitter:image" content="https://gwastudiox.site/img-web/social-share-image.png">
+
+    <link rel="icon" href="img-web/Untitled design (8).png" type="image/png">
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/styles.css" rel="stylesheet">
+    
+    <style>
+        .blog-header {
+            background: linear-gradient(135deg, rgba(13, 17, 23, 0.9) 0%, rgba(0, 0, 0, 0.95) 100%),
+                        url('https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80') no-repeat center center;
+            background-size: cover;
+            padding: 100px 0;
+            margin-bottom: 50px;
+        }
+        
+        .blog-content img {
+            border-radius: 12px;
+            margin: 25px 0;
+        }
+        
+        .author-box {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 25px;
+            margin: 40px 0;
+        }
+        
+        .author-box img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-right: 20px;
+        }
+        
+        .related-posts .card {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            transition: all 0.3s ease;
+        }
+        
+        .related-posts .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        
+        .related-posts .card img {
+            height: 150px;
+            object-fit: cover;
+        }
+        
+        .social-share {
+            background-color: var(--bg-secondary);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 30px 0;
+        }
+        
+        .social-share a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--bg-dark);
+            color: var(--accent-cyan);
+            font-size: 18px;
+            margin-right: 10px;
+            transition: all 0.3s;
+        }
+        
+        .social-share a:hover {
+            background-color: var(--accent-cyan);
+            color: var(--bg-dark);
+            transform: translateY(-3px);
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="img-web/logo-whitev2.svg" alt="GWAstudioX Logo - Digital Marketing Agency Bangalore" id="navbar-logo"
+                     onerror="this.onerror=null; this.src='https://placehold.co/200x60/0d1117/22d3ee?text=GWAstudioX';">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item mx-2"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link" href="index.html#services">Services</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link" href="index.html#about">About</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link" href="index.html#portfolio">Portfolio</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link" href="index.html#testimonials">Clients</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link active" href="blog.html">Blog</a></li>
+                    <li class="nav-item mx-2"><a class="nav-link" href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Blog Header -->
+    <section class="blog-header">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <span class="badge bg-primary-custom mb-3">Design</span>
+                    <h1 class="display-4 fw-bold text-light mb-4">Modern Web Design Best Practices for <span>User Engagement</span></h1>
+                    <p class="lead text-muted">Learn how to create websites that not only look stunning but also convert visitors into customers</p>
+                    <div class="d-flex justify-content-center text-muted mt-4">
+                        <span class="me-4"><i class="bi bi-person me-1"></i> Priya Sharma</span>
+                        <span class="me-4"><i class="bi bi-calendar me-1"></i> Jan 5, 2025</span>
+                        <span><i class="bi bi-clock me-1"></i> 6 min read</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Content -->
+    <main class="section-padding">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="blog-content">
+                        <p class="lead">In today's digital landscape, a website is often the first point of contact between your business and potential customers. With attention spans shorter than ever and competition fiercer than ever, creating a website that not only captures attention but also drives conversions is crucial for success.</p>
+                        
+                        <p>In this comprehensive guide, we'll explore the cutting-edge web design best practices that are defining user engagement in 2025. From minimalist aesthetics to AI-powered personalization, these techniques will help you create websites that convert visitors into loyal customers.</p>
+                        
+                        <img src="https://images.unsplash.com/photo-1551650975-87deedd944c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1374&q=80" alt="Modern web design interface" class="img-fluid w-100">
+                        
+                        <h2 class="mt-5">1. Minimalist Design with Maximum Impact</h2>
+                        <p>The "less is more" philosophy has never been more relevant in web design. Modern users are overwhelmed with information, and clean, minimalist designs help them focus on what matters most. This approach emphasizes whitespace, simple color palettes, and clear typography to create visually appealing interfaces that guide users naturally through your content.</p>
+                        
+                        <p>Key principles of minimalist web design include:</p>
+                        <ul>
+                            <li><strong>Strategic Whitespace:</strong> Use whitespace to create visual breathing room and direct attention to key elements</li>
+                            <li><strong>Consistent Color Palette:</strong> Limit your color scheme to 2-3 primary colors with strategic accent colors</li>
+                            <li><strong>Typography Hierarchy:</strong> Establish clear visual hierarchy through font sizes, weights, and spacing</li>
+                            <li><strong>Intentional Imagery:</strong> Every image should serve a specific purpose in communicating your message</li>
+                        </ul>
+                        
+                        <h2 class="mt-5">2. Mobile-First Responsive Design</h2>
+                        <p>With over 60% of web traffic coming from mobile devices, designing for mobile first is no longer optional—it's essential. A mobile-first approach ensures your website delivers an exceptional experience across all devices, from smartphones to desktops.</p>
+                        
+                        <p>Essential elements of mobile-first design:</p>
+                        <ul>
+                            <li><strong>Touch-Friendly Navigation:</strong> Buttons and links should be large enough for easy tapping</li>
+                            <li><strong>Flexible Grid Systems:</strong> Use CSS Grid and Flexbox for layouts that adapt to any screen size</li>
+                            <li><strong>Optimized Media:</strong> Compress images and videos for fast loading on mobile networks</li>
+                            <li><strong>Progressive Enhancement:</strong> Start with core functionality and enhance for larger screens</li>
+                        </ul>
+                        
+                        <div class="alert alert-secondary">
+                            <h4 class="alert-heading">Pro Tip:</h4>
+                            <p class="mb-0">Test your website on multiple devices and browsers regularly. What looks perfect on your high-end smartphone might be problematic on older devices with slower processors.</p>
+                        </div>
+                        
+                        <h2 class="mt-5">3. Microinteractions for Enhanced Engagement</h2>
+                        <p>Microinteractions are subtle animations and feedback mechanisms that make digital experiences feel more human and responsive. These small details can significantly improve user engagement and satisfaction by providing immediate feedback and making interactions feel more natural.</p>
+                        
+                        <p>Effective microinteractions include:</p>
+                        <div class="row g-4 my-4">
+                            <div class="col-md-6">
+                                <div class="glass-card p-4 h-100">
+                                    <h4><i class="bi bi-mouse me-2 text-gradient"></i>Button Feedback</h4>
+                                    <p class="text-muted">Visual changes when users hover over or click buttons</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="glass-card p-4 h-100">
+                                    <h4><i class="bi bi-arrow-repeat me-2 text-gradient"></i>Loading Animations</h4>
+                                    <p class="text-muted">Engaging spinners or progress indicators during wait times</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="glass-card p-4 h-100">
+                                    <h4><i class="bi bi-check-circle me-2 text-gradient"></i>Form Validation</h4>
+                                    <p class="text-muted">Real-time feedback as users complete forms</p>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="glass-card p-4 h-100">
+                                    <h4><i class="bi bi-heart me-2 text-gradient"></i>Like/Share Actions</h4>
+                                    <p class="text-muted">Satisfying animations when users interact with content</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <h2 class="mt-5">4. Accessibility-First Design Approach</h2>
+                        <p>Creating inclusive websites isn't just ethically important—it's also good for business. Accessible design improves SEO, expands your potential audience, and often results in better overall user experiences for everyone.</p>
+                        
+                        <p>Accessibility best practices include:</p>
+                        <ol>
+                            <li><strong>Proper Color Contrast:</strong> Ensure text is readable for users with visual impairments</li>
+                            <li><strong>Semantic HTML:</strong> Use proper heading structure and landmark elements</li>
+                            <li><strong>Keyboard Navigation:</strong> Ensure all functionality is accessible via keyboard</li>
+                            <li><strong>Alt Text for Images:</strong> Provide descriptive alternatives for visual content</li>
+                            <li><strong>Screen Reader Compatibility:</strong> Test with assistive technologies</li>
+                        </ol>
+                        
+                        <h2 class="mt-5">5. Performance Optimization for Speed</h2>
+                        <p>Website speed directly impacts user engagement and conversion rates. A one-second delay in page load time can result in a 7% reduction in conversions. In 2025, users expect websites to load in under 2 seconds.</p>
+                        
+                        <p>Performance optimization techniques:</p>
+                        <ul>
+                            <li><strong>Image Optimization:</strong> Use modern formats like WebP and implement lazy loading</li>
+                            <li><strong>Code Minification:</strong> Remove unnecessary characters from CSS, JavaScript, and HTML</li>
+                            <li><strong>Content Delivery Networks:</strong> Serve content from servers closer to users</li>
+                            <li><strong>Browser Caching:</strong> Store static assets locally for returning visitors</li>
+                        </ul>
+                        
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Web development dashboard" class="img-fluid w-100">
+                        
+                        <h2 class="mt-5">Conclusion</h2>
+                        <p>The web design landscape in 2025 demands a holistic approach that balances aesthetic appeal with functional excellence. By implementing these modern web design best practices, businesses in Bangalore and beyond can create websites that not only capture attention but also drive meaningful conversions.</p>
+                        
+                        <p>Remember that web design is an iterative process. Regular testing, user feedback, and staying updated with emerging trends are key to maintaining a website that continues to engage and convert visitors effectively.</p>
+                        
+                        <p>For businesses seeking expert guidance on implementing these web design best practices, GWAstudioX offers comprehensive <a href="index.html#services">web design services in Bangalore</a> tailored to your specific industry and goals.</p>
+                        
+                        <h2 class="mt-5">Frequently Asked Questions About Modern Web Design</h2>
+                        <p>As businesses in Bangalore and beyond adopt modern web design approaches, several common questions arise:</p>
+                        
+                        <div class="accordion mt-4" id="webDesignFAQ">
+                            <div class="accordion-item glass-card mb-3">
+                                <h2 class="accordion-header" id="wdheadingOne">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#wdcollapseOne">
+                                        <strong>How important is mobile-first design in 2025?</strong>
+                                    </button>
+                                </h2>
+                                <div id="wdcollapseOne" class="accordion-collapse collapse" data-bs-parent="#webDesignFAQ">
+                                    <div class="accordion-body">
+                                        <p>Mobile-first design is crucial in 2025, with over 60% of web traffic coming from mobile devices. A mobile-first approach ensures your website delivers an exceptional experience across all devices, from smartphones to desktops. This approach helps you prioritize essential content and functionality, resulting in faster loading times and better user experiences for all visitors.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item glass-card mb-3">
+                                <h2 class="accordion-header" id="wdheadingTwo">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#wdcollapseTwo">
+                                        <strong>What role does AI play in modern web design?</strong>
+                                    </button>
+                                </h2>
+                                <div id="wdcollapseTwo" class="accordion-collapse collapse" data-bs-parent="#webDesignFAQ">
+                                    <div class="accordion-body">
+                                        <p>AI is transforming web design by enabling personalized user experiences, automating repetitive tasks, and providing data-driven insights. AI-powered tools can analyze user behavior to optimize layouts, suggest design improvements, and even generate content variations. For Bangalore businesses, AI can help create more engaging websites that adapt to individual user preferences in real-time.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item glass-card mb-3">
+                                <h2 class="accordion-header" id="wdheadingThree">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#wdcollapseThree">
+                                        <strong>How can I ensure my website is accessible to all users?</strong>
+                                    </button>
+                                </h2>
+                                <div id="wdcollapseThree" class="accordion-collapse collapse" data-bs-parent="#webDesignFAQ">
+                                    <div class="accordion-body">
+                                        <p>Web accessibility involves designing and developing websites that can be used by people with disabilities. Key practices include providing proper color contrast, using semantic HTML, adding alt text for images, ensuring keyboard navigation, and testing with screen readers. Accessible websites not only comply with legal requirements but also improve SEO and provide better experiences for all users.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item glass-card mb-3">
+                                <h2 class="accordion-header" id="wdheadingFour">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#wdcollapseFour">
+                                        <strong>What is the ideal loading time for a modern website?</strong>
+                                    </button>
+                                </h2>
+                                <div id="wdcollapseFour" class="accordion-collapse collapse" data-bs-parent="#webDesignFAQ">
+                                    <div class="accordion-body">
+                                        <p>In 2025, users expect websites to load in under 2 seconds. A one-second delay in page load time can result in a 7% reduction in conversions. To achieve optimal loading times, optimize images, minify code, leverage browser caching, use content delivery networks, and implement lazy loading for non-critical resources. Regular performance testing is essential to maintain fast loading speeds.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="accordion-item glass-card mb-3">
+                                <h2 class="accordion-header" id="wdheadingFive">
+                                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#wdcollapseFive">
+                                        <strong>How often should I update my website design?</strong>
+                                    </button>
+                                </h2>
+                                <div id="wdcollapseFive" class="accordion-collapse collapse" data-bs-parent="#webDesignFAQ">
+                                    <div class="accordion-body">
+                                        <p>While major redesigns typically occur every 2-3 years, websites should receive continuous minor updates to stay current with design trends, technological advances, and user expectations. Regular updates might include refreshing color schemes, updating fonts, improving navigation, adding new features, and optimizing for emerging technologies. The key is to evolve your design gradually while maintaining brand consistency.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Social Share -->
+                    <div class="social-share">
+                        <h4 class="mb-3">Share this article:</h4>
+                        <div class="d-flex">
+                            <a href="#" aria-label="Share on Facebook"><i class="bi bi-facebook"></i></a>
+                            <a href="#" aria-label="Share on Twitter"><i class="bi bi-twitter"></i></a>
+                            <a href="#" aria-label="Share on LinkedIn"><i class="bi bi-linkedin"></i></a>
+                            <a href="#" aria-label="Share on WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                            <a href="#" aria-label="Share on Pinterest"><i class="bi bi-pinterest"></i></a>
+                        </div>
+                    </div>
+                    
+                    <!-- Author Box -->
+                    <div class="author-box">
+                        <div class="d-flex align-items-center">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Priya Sharma">
+                            <div>
+                                <h4 class="mb-1">Priya Sharma</h4>
+                                <p class="text-muted mb-2">Senior Web Designer at GWAstudioX</p>
+                                <p class="mb-0">Priya has over 7 years of experience in web design and user experience. She specializes in creating beautiful, functional websites that convert visitors into customers for businesses in Bangalore and across India.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Related Posts -->
+            <div class="row justify-content-center mt-5">
+                <div class="col-lg-10">
+                    <h3 class="mb-4">Related Articles</h3>
+                    <div class="row g-4 related-posts">
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0">
+                                <img src="https://images.unsplash.com/photo-1432888498266-38ffec3eaf0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1474&q=80" class="card-img-top" alt="SEO strategies">
+                                <div class="card-body">
+                                    <span class="badge bg-primary-custom mb-2">SEO</span>
+                                    <h5 class="card-title">SEO Optimization Strategies for 2025</h5>
+                                    <p class="card-text text-muted">Discover the latest SEO techniques that will boost your website's ranking in 2025 and beyond.</p>
+                                    <a href="blog-seo-strategies-2025.html" class="btn btn-outline-custom">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0">
+                                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" class="card-img-top" alt="Digital marketing">
+                                <div class="card-body">
+                                    <span class="badge bg-primary-custom mb-2">Marketing</span>
+                                    <h5 class="card-title">Top Digital Marketing Trends in Bangalore for 2025</h5>
+                                    <p class="card-text text-muted">Explore the emerging digital marketing trends that are transforming businesses in Bangalore.</p>
+                                    <a href="blog-marketing-trends-bangalore.html" class="btn btn-outline-custom">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="card h-100 border-0">
+                                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1415&q=80" class="card-img-top" alt="Social media">
+                                <div class="card-body">
+                                    <span class="badge bg-primary-custom mb-2">Social Media</span>
+                                    <h5 class="card-title">Building an Effective Social Media Marketing Strategy</h5>
+                                    <p class="card-text text-muted">Master the art of social media marketing with these proven strategies for maximum engagement.</p>
+                                    <a href="blog-social-media-strategy.html" class="btn btn-outline-custom">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- CTA Section -->
+    <section class="py-5 cta-section">
+        <div class="container text-center py-5">
+            <h2 class="display-5 fw-bold mb-4 text-light">Need a Stunning Website Design?</h2>
+            <p class="fs-5 mb-5 max-w-700 mx-auto text-muted">Our expert team in Bangalore can create a website that converts visitors into customers.</p>
+            <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
+                <a href="index.html#contact" class="btn btn-primary-custom btn-lg px-5 py-3">Get a Free Consultation</a>
+                <a href="tel:+916238420550" class="btn btn-outline-custom btn-lg px-5 py-3">Call Us Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="pt-5 pb-4">
+        <div class="container pt-4">
+            <div class="row g-5">
+                <div class="col-lg-3 col-md-6">
+                    <h3 class="h3 fw-bold mb-4">GWAstudio<span>X</span></h3>
+                    <p class="text-secondary mb-4">A leading digital marketing and web design agency in Bangalore, India.</p>
+                    <div class="d-flex gap-3">
+                        <a href="https://www.facebook.com/share/19ajvjrYad/" class="social-icon" aria-label="Visit our Facebook page"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/digital_marketing_gwa_studio_x?utm_source=ig_web_button_share_sheet&igsh=cTV3YXd2ZmtheWtl" class="social-icon" aria-label="Visit our Instagram profile"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="social-icon" aria-label="Visit our LinkedIn profile"><i class="bi bi-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="h5 fw-bold mb-4 text-light">Services</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html#services" class="text-secondary text-decoration-none">Digital Marketing</a></li>
+                        <li class="mb-2"><a href="index.html#services" class="text-secondary text-decoration-none">Brand Design</a></li>
+                        <li class="mb-2"><a href="index.html#services" class="text-secondary text-decoration-none">Web Design</a></li>
+                        <li class="mb-2"><a href="index.html#services" class="text-secondary text-decoration-none">Creative Services</a></li>
+                        <li class="mb-2"><a href="index.html#services" class="text-secondary text-decoration-none">Print Media Services</a></li>
+                        <li class="mb-2"><a href="index.html#services" class="text-secondary text-decoration-none">Photography & Videography</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="h5 fw-bold mb-4 text-light">Company</h4> 
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html#about" class="text-secondary text-decoration-none">About Us</a></li>
+                        <li class="mb-2"><a href="index.html#portfolio" class="text-secondary text-decoration-none">Portfolio</a></li>
+                        <li class="mb-2"><a href="index.html#testimonials" class="text-secondary text-decoration-none">Testimonials</a></li>
+                        <li class="mb-2"><a href="#" class="text-secondary text-decoration-none">Careers</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h4 class="h5 fw-bold mb-4">Contact</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-3 d-flex">
+                            <i class="bi bi-geo-alt text-secondary me-2"></i>
+                            <span class="text-secondary">kerala,karnataka</span>
+                        </li>
+                        <li class="mb-3 d-flex">
+                            <i class="bi bi-telephone text-secondary me-2"></i>
+                            <span class="text-secondary">+916238420550</span>
+                        </li>
+                        <li class="mb-3 d-flex">
+                            <i class="bi bi-envelope text-secondary me-2"></i>
+                            <span class="text-secondary">gwastudiox@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <hr class="border-secondary mt-5 mb-4">
+            
+            <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+                <p class="text-secondary mb-3 mb-md-0">
+                    &copy; 2025 GWAstudioX. All rights reserved.
+                </p>
+                <div class="d-flex gap-4">
+                    <a href="privacy-poilicy.html" class="text-secondary text-decoration-none">Privacy Policy</a>
+                    <a href="Terms-of-service.html" class="text-secondary text-decoration-none">Terms of Service</a>
+                    <a href="sitemap.html" class="text-secondary text-decoration-none">Sitemap</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>
