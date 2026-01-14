@@ -143,6 +143,7 @@
   <link href="css/styles.css" rel="stylesheet">
 </head>
 
+
 <body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="85">
   <!-- Preloader -->
   <div class="preloader">
@@ -184,6 +185,10 @@
   <main>
     <!-- Hero Section with Video Background -->
     <section id="home" class="hero-video-section text-white py-5 py-lg-6">
+      <!-- Glassmorphic Decorative Shapes -->
+      <div class="glass-shape shape-1"></div>
+      <div class="glass-shape shape-2"></div>
+
       <div class="hero-video-wrapper">
         <!-- Background Video -->
         <video id="heroVideo" autoplay muted loop playsinline preload="auto"
@@ -199,8 +204,13 @@
       <div class="container position-relative hero-content-wrapper">
         <div class="row align-items-center justify-content-center">
           <div class="col-lg-10 text-center hero-content">
+            <!-- Trust Badge -->
+            <div class="trust-badge mb-3 fade-in-up" style="animation-delay: 0.2s;">
+              <span class="badge-icon">🏆</span> <span>Top Rated Agency in Bangalore</span>
+            </div>
             <h1 class="display-4 fw-bold mb-4">
-              Transform Your Business With <span>Digital Excellence</span>
+              Transform Your Business With <br>
+              <span class="text-gradient-cyan" id="typing-text">Digital Excellence</span><span class="cursor">|</span>
             </h1>
             <p class="lead mb-5 opacity-90">
               We are a premier digital marketing agency in Bangalore, combining creative design with data-driven
@@ -212,6 +222,17 @@
             </div>
           </div>
         </div>
+      </div>
+      </div>
+
+      <!-- Scroll Down Indicator -->
+      <div class="scroll-indicator">
+        <a href="#services">
+          <div class="mouse">
+            <div class="wheel"></div>
+          </div>
+          <div class="arrow-span"></div>
+        </a>
       </div>
     </section>
 
@@ -264,7 +285,10 @@
                 <li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i>SEO Optimization</li>
                 <li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i>PPC Campaigns</li>
                 <li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i>Social Media Strategy</li>
-              </ul>
+                <li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i>lead Generation</li>
+                <li class="mb-2"><i class="bi bi-check-circle-fill me-2"></i>Content Marketing</li>
+
+
             </div>
           </div>
           <div class="col-md-6 col-lg-4 d-flex">
@@ -512,181 +536,7 @@
       </div>
     </section>
 
-    <!-- Photography & Videography Section -->
-    <section id="photography" class="section-padding bg-dark">
-      <div class="container">
-        <div class="text-center mb-5">
-          <h2 class="section-title">Photography & <span>Videography</span></h2>
-          <p class="section-subtitle">Capturing moments that matter. From weddings to reels, we create visual stories
-            that last a lifetime.</p>
-        </div>
 
-        <!-- Filters -->
-        <div class="gallery-filters">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="wedding">Wedding</button>
-          <button class="filter-btn" data-filter="pre-wedding">Pre-Wedding</button>
-          <button class="filter-btn" data-filter="baby-shower">Baby Shower</button>
-          <button class="filter-btn" data-filter="reels">Reels</button>
-        </div>
-
-        <!-- Gallery Grid -->
-        <div class="masonry-grid" id="gallery-grid">
-          <!-- Wedding -->
-          <div class="gallery-item" data-category="wedding">
-            <img
-              src="https://images.unsplash.com/photo-1519741497674-611481863552?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-              alt="Wedding Photography">
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h4>Royal Wedding</h4>
-                <p>Wedding Photography</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Pre-Wedding -->
-          <div class="gallery-item" data-category="pre-wedding">
-            <img
-              src="https://images.unsplash.com/photo-1515934751635-c81c6bc9a2d8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-              alt="Pre-Wedding Shoot">
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h4>Couple Shoot</h4>
-                <p>Pre-Wedding</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Baby Shower -->
-          <div class="gallery-item" data-category="baby-shower">
-            <img loading="lazy" src="img-web/photography/baby-shower.jpeg" alt="Baby Shower">
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h4>Joyful Moments</h4>
-                <p>Baby Shower</p>
-              </div>
-            </div>
-          </div>
-          <div class="gallery-item" data-category="baby-shower">
-            <img loading="lazy" src="img-web/photography/babay-shower2.jpeg" alt="Baby Shower">
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h4>Celebration</h4>
-                <p>Baby Shower</p>
-              </div>
-            </div>
-          </div>
-          <div class="gallery-item" data-category="baby-shower">
-            <img loading="lazy" src="img-web/photography/baby shower3.jpeg" alt="Baby Shower">
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h4>New Life</h4>
-                <p>Baby Shower</p>
-              </div>
-            </div>
-          </div>
-          <div class="gallery-item" data-category="baby-shower">
-            <img loading="lazy" src="img-web/photography/babay-shower4.jpeg" alt="Baby Shower">
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h4>Family Love</h4>
-                <p>Baby Shower</p>
-              </div>
-            </div>
-          </div>
-          <div class="gallery-item" data-category="baby-shower">
-            <img loading="lazy" src="img-web/photography/baby-shower5.jpeg" alt="Baby Shower">
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h4>Sweet Memories</h4>
-                <p>Baby Shower</p>
-              </div>
-            </div>
-          </div>
-          <div class="gallery-item" data-category="baby-shower">
-            <img loading="lazy" src="img-web/photography/baby-shoer6.jpeg" alt="Baby Shower">
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h4>Anticipation</h4>
-                <p>Baby Shower</p>
-              </div>
-            </div>
-          </div>
-          <div class="gallery-item" data-category="baby-shower">
-            <img loading="lazy" src="img-web/photography/baby-shower7.jpeg" alt="Baby Shower">
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h4>Happiness</h4>
-                <p>Baby Shower</p>
-              </div>
-            </div>
-          </div>
-          <div class="gallery-item" data-category="baby-shower">
-            <img loading="lazy" src="img-web/photography/babyshower1.jpeg" alt="Baby Shower">
-            <div class="gallery-overlay">
-              <div class="gallery-info">
-                <h4>Blessings</h4>
-                <p>Baby Shower</p>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Reels Section (Shown via filter) -->
-        <div class="reels-container" id="reels-container" style="display: none;">
-          <div class="reel-item" data-category="reels" data-video-src="img-web/photography/reel1.mp4">
-            <video muted loop playsinline onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-              <source src="img-web/photography/reel1.mp4" type="video/mp4">
-            </video>
-            <div class="reel-overlay">
-              <i class="bi bi-play-circle-fill reel-icon"></i>
-            </div>
-          </div>
-          <div class="reel-item" data-category="reels" data-video-src="img-web/photography/reel2.mp4">
-            <video muted loop playsinline onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-              <source src="img-web/photography/reel2.mp4" type="video/mp4">
-            </video>
-            <div class="reel-overlay">
-              <i class="bi bi-play-circle-fill reel-icon"></i>
-            </div>
-          </div>
-          <div class="reel-item" data-category="reels" data-video-src="img-web/photography/reel3.mp4">
-            <video muted loop playsinline onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-              <source src="img-web/photography/reel3.mp4" type="video/mp4">
-            </video>
-            <div class="reel-overlay">
-              <i class="bi bi-play-circle-fill reel-icon"></i>
-            </div>
-          </div>
-          <div class="reel-item" data-category="reels" data-video-src="img-web/photography/reel4.mp4">
-            <video muted loop playsinline onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-              <source src="img-web/photography/reel4.mp4" type="video/mp4">
-            </video>
-            <div class="reel-overlay">
-              <i class="bi bi-play-circle-fill reel-icon"></i>
-            </div>
-          </div>
-          <div class="reel-item" data-category="reels" data-video-src="img-web/photography/reel5.mp4">
-            <video muted loop playsinline onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;">
-              <source src="img-web/photography/reel5.mp4" type="video/mp4">
-            </video>
-            <div class="reel-overlay">
-              <i class="bi bi-play-circle-fill reel-icon"></i>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Lightbox Modal -->
-      <div class="lightbox" id="lightbox">
-        <span class="lightbox-close">&times;</span>
-        <div class="lightbox-content">
-          <img loading="lazy" src="" alt="Lightbox Image" id="lightbox-img">
-          <video controls playsinline id="lightbox-video" style="display: none;"></video>
-        </div>
-      </div>
-    </section>
 
     <!-- Clients Carousel Section -->
     <section class="section-padding bg-dark">
@@ -1089,6 +939,45 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script src="js/main.js"></script>
+    <!-- Typing Effect Script -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        const textElement = document.getElementById('typing-text');
+        const texts = ["Digital Excellence", "Creative Branding", "AI-Powered Growth", "Strategic Marketing"];
+        let textIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+        let typeSpeed = 100;
+
+        function type() {
+          const currentText = texts[textIndex];
+
+          if (isDeleting) {
+            textElement.textContent = currentText.substring(0, charIndex - 1);
+            charIndex--;
+            typeSpeed = 50;
+          } else {
+            textElement.textContent = currentText.substring(0, charIndex + 1);
+            charIndex++;
+            typeSpeed = 100;
+          }
+
+          if (!isDeleting && charIndex === currentText.length) {
+            isDeleting = true;
+            typeSpeed = 2000; // Pause at end
+          } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            textIndex = (textIndex + 1) % texts.length; // Next text
+            typeSpeed = 500; // Pause before typing next
+          }
+
+          setTimeout(type, typeSpeed);
+        }
+
+        // Initial start
+        if (textElement) type();
+      });
+    </script>
 </body>
 
 </html>
